@@ -3,6 +3,7 @@
 #include <imgui/imgui.h>
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
+#include <Graphic/Text.h>
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -12,6 +13,7 @@ using glm::mat4;
 
 int main()
 {
+	Text::Print();
 	glfwSetErrorCallback(
 		[](int error, const char* description)
 		{

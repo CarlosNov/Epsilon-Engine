@@ -49,6 +49,9 @@ add_library(glad ${GLAD_SOURCES})
 #Set Properties
 set_property(TARGET glfw          PROPERTY FOLDER "ThirdPartyLibraries")
 set_property(TARGET glad          PROPERTY FOLDER "ThirdPartyLibraries")
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Sandbox)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(Sandbox)
 add_subdirectory(EpsilonCore)

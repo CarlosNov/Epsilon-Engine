@@ -5,6 +5,6 @@ namespace Text
 {
 	void Print()
 	{
-		printf("Hola Paula!\n");
+		printf("Hola Carlos!\n");
 	}
 }
