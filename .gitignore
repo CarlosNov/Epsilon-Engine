@@ -56,3 +56,10 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+
+#Project
+build/
+deps/.bootstrap.json
+deps/archives
+deps/src/
+imgui.ini
