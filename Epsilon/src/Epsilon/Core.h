@@ -9,3 +9,5 @@
 #else
 	#error Epsilon only supports Windows!
 #endif
+
+#define DEFINE_BIT(x) (1 << x)

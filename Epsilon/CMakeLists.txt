@@ -19,5 +19,13 @@ set_target_properties(Epsilon PROPERTIES
     SUFFIX ".dll"
 )
 
+target_precompile_headers(Epsilon PRIVATE src/EpsilonPCHeader.h)
+
+
+# Folder structure
+ASSIGN_SOURCE_GROUP("${SRC_FILES}")
+ASSIGN_SOURCE_GROUP("${HEADER_FILES}")
+
+#Compilation definitions
 add_compile_definitions(EPS_PLATFORM_WINDOWS)
 add_compile_definitions(EPS_BUILD_DLL)

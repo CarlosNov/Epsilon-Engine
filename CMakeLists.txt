@@ -26,14 +26,13 @@ set(GLFW_INSTALL OFF CACHE BOOL "")
 
 add_subdirectory(deps/src/glfw)
 
-include_directories(.)
-include_directories(deps/src)
+#Include directories for the library
 include_directories(deps/src/glfw/include)
 include_directories(deps/src/glm)
 include_directories(deps/glad/include)
 include_directories(deps/src/ImGuizmo/src)
-
-include_directories(EpsilonCore/src)
+include_directories(deps/src/spdlog/include)
+include_directories(Epsilon/src)
 
 add_subdirectory(deps/cmake/ImGuizmo)
 
@@ -50,6 +49,7 @@ add_library(glad ${GLAD_SOURCES})
 set_property(TARGET glfw          PROPERTY FOLDER "ThirdPartyLibraries")
 set_property(TARGET glad          PROPERTY FOLDER "ThirdPartyLibraries")
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Sandbox)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 

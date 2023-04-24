@@ -832,7 +832,7 @@ def main(argv):
             traceback.print_exc()
             failed_libraries.append(name)
         except:
-            log("ERROR: Failure to bootstrap library " + name + " (reason: " + str(sys.exc_info()[0]) + ")")
+            log("ERROR: Failure to bootstrap library " + name + " (reason: " + str(sys.exc_info()[0]) + ", " + str(traceback.format_exc())+ ")")
             if break_on_first_error:
                 exit(-1)
             traceback.print_exc()

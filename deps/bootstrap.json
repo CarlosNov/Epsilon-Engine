@@ -30,5 +30,13 @@
          "url": "https://github.com/CedricGuillemet/ImGuizmo",
          "revision" : "3a676c4efcab65817658d34eebb56cb91663d5ed"
     }
+},
+{
+    "name": "spdlog",
+    "source": {
+        "type": "git",
+         "url": "https://github.com/gabime/spdlog.git",
+         "revision" : "v1.11.0"
+    }
 }
 ]
