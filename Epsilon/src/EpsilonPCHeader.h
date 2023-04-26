@@ -12,6 +12,10 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Epsilon/Core.h"
+#include "Epsilon/Log.h"
+#include "Epsilon/Core/Assert.h"
+
 #ifdef EPS_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
