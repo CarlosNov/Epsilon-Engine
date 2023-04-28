@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Epsilon/Window.h"
+#include "Epsilon/Core/Window.h"
 
 #include <GLFW/glfw3.h>
 

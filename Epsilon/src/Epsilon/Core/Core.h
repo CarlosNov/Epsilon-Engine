@@ -25,3 +25,5 @@
 
 #define EPS_EXPAND_MACRO(x) x
 #define EPS_STRINGIFY_MACRO(x) #x
+
+#define EPS_BIND_EVENT_FN(fn) std::bind(&Application::fn, this, std::placeholders::_1)

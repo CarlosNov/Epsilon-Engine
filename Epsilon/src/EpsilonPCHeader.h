@@ -8,12 +8,13 @@
 
 #include <string>
 #include <sstream>
+#include <array>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Epsilon/Core.h"
-#include "Epsilon/Log.h"
+#include "Epsilon/Core/Core.h"
+#include "Epsilon/Core/Log.h"
 #include "Epsilon/Core/Assert.h"
 
 #ifdef EPS_PLATFORM_WINDOWS

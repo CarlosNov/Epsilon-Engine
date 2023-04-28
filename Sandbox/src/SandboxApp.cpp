@@ -1,4 +1,5 @@
 #include <Epsilon.h>
+#include <Epsilon/Core/EntryPoint.h>
 
 class Sandbox : public Epsilon::Application
 {
@@ -12,7 +13,6 @@ public:
 	{
 
 	}
-
 };
 
 Epsilon::Application* Epsilon::CreateApplication()

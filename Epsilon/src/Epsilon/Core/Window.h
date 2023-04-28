@@ -2,7 +2,7 @@
 
 #include "EpsilonPCHeader.h"
 
-#include "Epsilon/Core.h"
+#include "Epsilon/Core/Core.h"
 #include "Epsilon/Events/Event.h"
 
 namespace Epsilon

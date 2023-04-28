@@ -9,7 +9,7 @@ namespace Epsilon
 	public:
 		WindowCloseEvent() = default;
 
-		std::string toString() const override
+		std::string ToString() const override
 		{
 			return "WindowClose()";
 		}
@@ -27,7 +27,7 @@ namespace Epsilon
 		unsigned int GetWidth() const { return m_Width; }
 		unsigned int GetHeight() const { return m_Height; }
 
-		std::string toString() const override 
+		std::string ToString() const override
 		{
 			std::ostringstream ss;
 			ss << "WindowResizeEvent(width: " << m_Width << ", height: " << m_Height << ")";

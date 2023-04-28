@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Epsilon/Core.h"
+#include "Epsilon/Core/Core.h"
 
 namespace Epsilon
 {
@@ -37,7 +37,7 @@ namespace Epsilon
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetEventName() const = 0;
 		virtual int GetEventCategory() const = 0;
-		virtual std::string toString() const { return "Event(eventName: " + std::string(GetEventName()) + ", eventCategory: " + std::to_string(GetEventCategory()) +")"; }
+		virtual std::string ToString() const { return "Event(eventName: " + std::string(GetEventName()) + ", eventCategory: " + std::to_string(GetEventCategory()) +")"; }
 
 		bool IsInCategory(EventCategory eventCategory)
 		{
@@ -46,7 +46,7 @@ namespace Epsilon
 
 		std::ostream& operator<<(std::ostream& os)
 		{
-			return os << toString();
+			return os << ToString();
 		}
 
 	protected:

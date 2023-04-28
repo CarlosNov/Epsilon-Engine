@@ -27,7 +27,7 @@ namespace Epsilon
 
 		bool IsRepeat() const { return m_IsRepeat;  }
 
-		std::string toString() const override
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "KeyPressedEvent(KeyCode: " << m_KeyCode << ", IsRepeat: " << std::boolalpha << m_IsRepeat << ")";
@@ -46,7 +46,7 @@ namespace Epsilon
 		KeyReleasedEvent(const KeyCode keycode)
 			: KeyEvent(keycode) {}
 
-		std::string toString() const override
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "KeyReleasedEvent(KeyCode: " << m_KeyCode << ")";
@@ -64,7 +64,7 @@ namespace Epsilon
 		KeyTypedEvent(const KeyCode keycode)
 			: KeyEvent(keycode) {}
 
-		std::string toString() const override
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "KeyTypedEvent(KeyCode: " << m_KeyCode << ")";
