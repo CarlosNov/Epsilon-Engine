@@ -44,6 +44,8 @@ namespace Epsilon
 			return GetEventCategory() & eventCategory;
 		}
 
+		bool IsHandled() { return m_Handled; }
+
 		std::ostream& operator<<(std::ostream& os)
 		{
 			return os << ToString();

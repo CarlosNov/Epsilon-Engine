@@ -1,5 +1,7 @@
 #include "EpsilonPCHeader.h"
-#include "Application.h"
+#include "Epsilon/Core/Application.h"
+
+#include <glad/glad.h>
 
 namespace Epsilon
 {
@@ -14,19 +16,29 @@ namespace Epsilon
 
 	}
 
+	void Application::Run()
+	{
+		while (m_Running)
+		{
+			for (auto layer : m_LayerStack)
+			{
+				layer->OnUpdate();
+			}
+			m_Window->OnUpdate();
+		}
+	}
+
 	void Application::OnEvent(Event& event)
 	{
 		EventDispatcher dispatcher(event);
 		dispatcher.Dispatch<WindowCloseEvent>(EPS_BIND_EVENT_FN(OnWindowClose));
 
 		EPS_CORE_LOG_INFO("{0}", event.ToString());
-	}
 
-	void Application::Run()
-	{
-		while (m_Running)
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{
-			m_Window->OnUpdate();
+			(*--it)->OnEvent(event);
+			if (event.IsHandled()) { break; }
 		}
 	}
 
@@ -34,5 +46,15 @@ namespace Epsilon
 	{
 		m_Running = false;
 		return true;
+	}
+
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+	}
+
+	void Application::PushOverlay(Layer* overlay)
+	{
+		m_LayerStack.PushOverlay(overlay);
 	}
 }

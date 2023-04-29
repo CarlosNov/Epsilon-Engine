@@ -2,6 +2,7 @@
 
 // File that includes all headers for applications uses
 #include "Epsilon/Core/Application.h"
+#include "Epsilon/Core/Layer.h"
 #include "Epsilon/Core/Log.h"
 #include "Epsilon/Core/Assert.h"
 

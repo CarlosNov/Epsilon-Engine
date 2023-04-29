@@ -1,6 +1,6 @@
 #include "EpsilonPCHeader.h"
-#include "WindowsWindow.h"
 
+#include "Platform/Windows/WindowsWindow.h"
 #include "Epsilon/Events/ApplicationEvent.h"
 #include "Epsilon/Events/KeyEvent.h"
 #include "Epsilon/Events/MouseEvent.h"
@@ -48,6 +48,10 @@ namespace Epsilon
 
 		m_Window = glfwCreateWindow((int)properties.Width, (int)properties.Height, properties.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		EPS_CORE_ASSERT(status, "Error initialazing GLAD.");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		

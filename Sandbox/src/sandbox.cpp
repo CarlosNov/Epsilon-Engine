@@ -1,14 +1,14 @@
-#include <glad/gl.h>
-#include <GLFW/glfw3.h>
-#include <imgui.h>
-#include <glm/glm.hpp>
-#include <glm/ext.hpp>
+//#include <glad/gl.h>
+//#include <GLFW/glfw3.h>
+//#include <imgui.h>
+//#include <glm/glm.hpp>
+//#include <glm/ext.hpp>
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
 
-using glm::mat4;
+//using glm::mat4;
 
 /*
 int main()

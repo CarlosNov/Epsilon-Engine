@@ -14,6 +14,6 @@ target_include_directories(Sandbox PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_directories(Sandbox PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 # Link the executable to the DLL
-target_link_libraries(Sandbox glad glfw Epsilon)
+target_link_libraries(Sandbox Epsilon)
 
 add_compile_definitions(EPS_PLATFORM_WINDOWS)

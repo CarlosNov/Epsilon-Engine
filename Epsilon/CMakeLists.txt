@@ -8,14 +8,12 @@ add_library(Epsilon SHARED ${SRC_FILES} ${HEADER_FILES})
 # Set the include directories for the DLL project
 target_include_directories(Epsilon PRIVATE ${CMAKE_CURRENT_SOURCE_DIR} src/*.h)
 # Set the library link for the DLL project
-target_link_libraries(Epsilon glfw)
+target_link_libraries(Epsilon glfw glad)
 
 # Set the output directory for the DLL
 set_target_properties(Epsilon PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib
 )
-
-
 
 set_target_properties(Epsilon PROPERTIES
     OUTPUT_NAME "Epsilon"

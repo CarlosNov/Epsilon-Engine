@@ -24,7 +24,13 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "")
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "")
 set(GLFW_INSTALL OFF CACHE BOOL "")
 
+#Glad Library
+set(GLAD_SOURCES deps/glad/src/glad.c)
+
+add_library(glad ${GLAD_SOURCES})
+
 add_subdirectory(deps/src/glfw)
+add_subdirectory(deps/cmake/ImGuizmo)
 
 #Include directories for the library
 include_directories(deps/src/glfw/include)
@@ -33,17 +39,6 @@ include_directories(deps/glad/include)
 include_directories(deps/src/ImGuizmo/src)
 include_directories(deps/src/spdlog/include)
 include_directories(Epsilon/src)
-
-add_subdirectory(deps/cmake/ImGuizmo)
-
-#Glad Library
-set(GLAD_SOURCES deps/glad/src/gl.c deps/glad/src/vulkan.c)
-if(WIN32)
-	set(GLAD_SOURCES ${GLAD_SOURCES} deps/glad/src/wgl.c)
-	message(STATUS "Using GLAD for WIN32")
-endif()
-
-add_library(glad ${GLAD_SOURCES})
 
 #Set Properties
 set_property(TARGET glfw          PROPERTY FOLDER "ThirdPartyLibraries")
